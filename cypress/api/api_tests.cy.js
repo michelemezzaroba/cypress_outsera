@@ -3,11 +3,11 @@
 describe('FakeStoreAPI - HTTP Methods', () => {
     const baseUrl = 'https://fakestoreapi.com';
   
-    // Exemplo de GET: Obter todos os produtos
+    
     it('GET - Obter todos os produtos', () => {
       cy.request(`${baseUrl}/products`).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.be.an('array'); // Verifica que o retorno é uma lista de produtos
+        expect(response.body).to.be.an('array'); 
       });
     });
   
@@ -16,7 +16,7 @@ describe('FakeStoreAPI - HTTP Methods', () => {
       const productId = 1;
       cy.request(`${baseUrl}/products/${productId}`).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('id', productId); // Verifica que o produto retornado tem o ID esperado
+        expect(response.body).to.have.property('id', productId); 
       });
     });
   
@@ -28,7 +28,7 @@ describe('FakeStoreAPI - HTTP Methods', () => {
         password: 'senha123'
       }).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('username', 'novousuario'); // Verifica o nome do usuário criado
+        expect(response.body).to.have.property('username', 'novousuario'); 
       });
     });
   
@@ -43,7 +43,7 @@ describe('FakeStoreAPI - HTTP Methods', () => {
         category: 'category-atualizada'
       }).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('title', 'Produto Atualizado'); // Verifica que o título foi atualizado
+        expect(response.body).to.have.property('title', 'Produto Atualizado'); 
       });
     });
   
@@ -52,7 +52,7 @@ describe('FakeStoreAPI - HTTP Methods', () => {
       const userId = 1;
       cy.request('DELETE', `${baseUrl}/users/${userId}`).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('id', userId); // Confirma o ID do usuário deletado
+        expect(response.body).to.have.property('id', userId);
       });
     });
   });
