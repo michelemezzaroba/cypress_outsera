@@ -20,7 +20,10 @@ module.exports = defineConfig({
 
       return config;
     },
-    specPattern: "cypress/e2e/**/*.feature",
+    specPattern: [
+      'cypress/api/**/*.cy.js', // Para testes de API normais
+      'cypress/e2e/**/*.feature'// Para testes de Cucumber
+    ],
     supportFile: "cypress/support/e2e.js",
     reporter: "cypress-mochawesome-reporter", // Define o mochawesome como o reporter
     reporterOptions: {
