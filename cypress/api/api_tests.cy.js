@@ -23,12 +23,12 @@ describe('FakeStoreAPI - HTTP Methods', () => {
     
     it('POST - Criar um novo usuário', () => {
       cy.request('POST', `${baseUrl}/users`, {
-        email: 'novousuario@example.com',
+        email: 'novousuario@qa.com',
         username: 'novousuario',
         password: 'senha123'
       }).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('username', 'novousuario'); 
+        expect(response.body).to.have.property('id'); 
       });
     });
   

@@ -1,0 +1,44 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x] 
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes de API com Mocha
+        run: npm run test:api
+
+      - name: Rodar testes E2E com Cypress
+        run: npm run test:e2e
+
+      - name: Gerar relatório Mochawesome
+        run: npm run tests:cucumber
+
+      - name: Upload de artefatos de teste
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-report
+          path: mochawesome-report 
