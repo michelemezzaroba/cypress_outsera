@@ -1,5 +1,3 @@
-// cypress/e2e/api_tests.cy.js
-
 describe('FakeStoreAPI - HTTP Methods', () => {
     const baseUrl = 'https://fakestoreapi.com';
   
