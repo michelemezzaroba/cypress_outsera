@@ -1,0 +1,59 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  # Job para testes de API
+  api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configuração do Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Instalação de dependências
+        run: npm install
+
+      - name: Execução dos testes de API
+        run: npm run test:api  # O script test:api deve estar configurado no package.json
+
+      - name: Upload dos resultados dos testes de API
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: api-test-results
+          path: path/to/api-test-results
+
+  # Job para testes E2E
+  e2e-tests:
+    runs-on: ubuntu-latest
+    needs: api-tests  # Aguarda o job de testes de API finalizar
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configuração do Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Instalação de dependências
+        run: npm install
+
+      - name: Execução dos testes E2E
+        run: npm run test:e2e  # O script test:e2e deve estar configurado no package.json
+
+      - name: Upload dos resultados dos testes E2E
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-test-results
+          path: path/to/e2e-test-results

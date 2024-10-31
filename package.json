@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+     "test:api": "npx mocha tests/api/*.spec.js",
+     "test:e2e": "npx cypress run --config-file cypress.json",
     "test": "cypress run",
-    "test:e2e": "cypress run && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx mochawesome-report-generator mochawesome.json"
+    "tests:cucumber": "cypress run && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx mochawesome-report-generator mochawesome.json"
   },
   "keywords": [],
   "author": "",
