@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 //import { Given, When, Then } from "cypress-cucumber-preprocessor"
-import LoginPage from '../../pages/LoginPage'
+import loginPage from '../../pages/loginPage'
 
 import url from '../../fixtures/url.json'
 

@@ -28,7 +28,7 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Rodar testes de API com Mocha
+      - name: Rodar testes de API
         run: npm run test:api
 
       - name: Rodar testes E2E com Cypress

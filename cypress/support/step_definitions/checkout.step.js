@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
-import CheckoutPage from '../../pages/checkoutPage'
+import checkoutPage from '../../pages/checkoutPage'
 
 const checkoutPage = new CheckoutPage()
 

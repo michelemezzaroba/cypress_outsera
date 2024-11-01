@@ -1,6 +1,6 @@
 /// <reference types = "Cypress" />
 
-class LoginPage {
+class loginPage {
     visit() {
       cy.visit()
     }
@@ -18,5 +18,5 @@ class LoginPage {
     }
   }
   
-  export default LoginPage
+  export default loginPage
   

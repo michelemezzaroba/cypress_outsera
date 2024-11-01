@@ -1,6 +1,6 @@
 /// <reference types = "Cypress" />
 
-class CheckoutPage {
+class checkoutPage {
     addItemToCart() {
       cy.get('.inventory_item').first().find('.btn_inventory').click()
     }
@@ -22,5 +22,5 @@ class CheckoutPage {
     }
   }
   
-  export default CheckoutPage
+  export default checkoutPage
   
