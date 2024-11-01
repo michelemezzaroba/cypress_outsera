@@ -1,22 +1,22 @@
 /// <reference types = "Cypress" />
 
 class loginPage {
-    visit() {
+    static visit() {
       cy.visit()
     }
   
-    fillUsername(username) {
+    static fillUsername(username) {
       cy.get('#user-name').type(username)
     }
   
-    fillPassword(password) {
+    static fillPassword(password) {
       cy.get('#password').type(password)
     }
   
-    submit() {
+    static submit() {
       cy.get('#login-button').click()
     }
   }
   
-  export default loginPage
+  export default loginPage;
   
