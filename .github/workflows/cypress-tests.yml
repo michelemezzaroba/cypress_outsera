@@ -34,8 +34,7 @@ jobs:
       - name: Rodar testes E2E com Cypress
         run: npm run test:e2e
 
-      - name: Gerar relatório Mochawesome
-        run: npm run test:cucumber
+      
 
       - name: Upload de artefatos de teste
         uses: actions/upload-artifact@v3

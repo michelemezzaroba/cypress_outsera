@@ -30,7 +30,7 @@ module.exports = defineConfig({
       reportDir: "cypress/reports", // Diretório onde os relatórios serão salvos
       overwrite: false,
       html: true,
-      json: true,
+      json: false,
     },
   },
 });
