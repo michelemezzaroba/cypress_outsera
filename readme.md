@@ -42,13 +42,6 @@ Para executar todos os testes em modo headless, utilize:
 npx cypress run
 ```
 
-## Executar os Testes e Gerar o Relatório
-
-Para gerar o relatório de testes, execute os testes com o comando:
-```bash
-npm run test:e2e
-```
-
 ## Estrutura do Relatório
 O relatório mostrará:
 
