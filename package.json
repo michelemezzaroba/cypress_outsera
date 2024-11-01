@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
      "test:api": "npx cypress run cypress/api/*.cy.js",
-     "test:e2e": "npx cypress run --config-file cypress.json",
-    "test": "cypress run",
-    "tests:cucumber": "cypress run && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx mochawesome-report-generator mochawesome.json"
+     "test:e2e": "npx cypress run",
+    "test:cucumber": "cypress run && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx mochawesome-report-generator mochawesome.json"
   },
   "keywords": [],
   "author": "",
