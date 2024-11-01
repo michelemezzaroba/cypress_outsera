@@ -6,7 +6,7 @@ import loginPage from '../../pages/loginPage'
 
 import url from '../../fixtures/url.json'
 
-const loginPage = new LoginPage()
+//const loginPage = new loginPage()
 
 Given("que o usuário acessa a página de login", () => {
   //loginPage.visit()

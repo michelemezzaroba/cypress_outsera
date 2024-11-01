@@ -4,7 +4,7 @@ import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
 import checkoutPage from '../../pages/checkoutPage'
 
-const checkoutPage = new CheckoutPage()
+//const checkoutPage = new CheckoutPage()
 
 When('o usuário adiciona um produto ao carrinho', () => {
   checkoutPage.addItemToCart()
