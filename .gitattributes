@@ -1,0 +1,2 @@
+# Relatórios gerados ficam no repositório, mas fora das estatísticas de linguagem do GitHub (Linguist).
+cypress/reports/** linguist-generated
